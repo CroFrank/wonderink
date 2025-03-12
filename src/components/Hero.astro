@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets"
 import HeroImg from "../assets/images/hero.webp"
+import HeroImgSmall from "../assets/images/hero-small.jpg"
 ---
 
 <section
@@ -11,14 +12,21 @@ import HeroImg from "../assets/images/hero.webp"
     alt="Tattoo, Piercing i Barber Shop usluge"
     width={2500}
     height={1667}
-    class="object-cover w-full h-full"
+    class="object-cover w-full h-full hidden md:block"
+  />
+  <Image
+    src={HeroImgSmall}
+    alt="Tattoo, Piercing i Barber Shop usluge"
+    width={1907}
+    height={1667}
+    class="object-cover w-full h-full block md:hidden"
   />
 
   <div
     class="zoom-in absolute inset-x-0 bottom-[20%] flex items-center justify-center"
   >
     <button
-      class="bg-transparent border-2 border-white text-white font-bold py-2 px-6 transition-all duration-300 transform hover:bg-white hover:border-white hover:text-black hover:scale-105 animate-fade-in tracking-wider text-[12px] sm:text-lg lg:text-xl lg:py-4 lg:px-12"
+      class="bg-transparent border-2 border-white text-white font-bold py-2 px-6 transition-all duration-300 transform hover:bg-white hover:border-white hover:text-black hover:scale-105 tracking-wider text-[10px] sm:text-lg lg:text-xl lg:py-4 lg:px-12"
     >
       KONTAKT
     </button>
