@@ -15,7 +15,7 @@ const { title, text, imageUrl, instagramUrl, position, pb, pt } = Astro.props
 ---
 
 <section
-  class=`w-full overflow-hidden bg-black ${pt ? "pt-12" : "pt-0"} ${pb ? "pb-14" : "pb-0"}`
+  class=`w-full overflow-hidden bg-black ${pt ? "pt-12" : "pt-0"} ${pb ? "pb-14" : "pb-0"} `
 >
   <div class="container mx-auto px-4">
     <div
@@ -40,7 +40,7 @@ const { title, text, imageUrl, instagramUrl, position, pb, pt } = Astro.props
       </div>
 
       <!-- Tekstualni sadržaj -->
-      <div class="w-full md:w-1/2 space-y-6">
+      <div class="w-full md:w-1/2 space-y-6 scroll-animation">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-100">{title}</h2>
 
         <div class="text-gray-100 leading-relaxed space-y-4">
