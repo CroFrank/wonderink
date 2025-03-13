@@ -1,0 +1,274 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout>
+  <div
+    class="flex justify-center items-center min-h-screen bg-black text-gray-300 px-4 py-12"
+  >
+    <div
+      class="relative w-full max-w-3xl bg-[#1a1312] px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-700 sm:rounded-lg sm:px-10"
+    >
+      <div class="text-center">
+        <h2 class="text-4xl font-bold text-red-500 mb-3">Česta pitanja</h2>
+        <p class="text-lg text-gray-200">
+          Odgovori na najčešće postavljana pitanja
+        </p>
+      </div>
+
+      <div class="mt-8 space-y-6 divide-y divide-gray-700">
+        <!-- Pitanje 1 -->
+        <details class="group">
+          <summary
+            class="flex cursor-pointer items-center justify-between text-lg font-medium text-white py-4"
+          >
+            <span>Kako se mogu naručiti?</span>
+            <span class="transition group-open:rotate-180">
+              <svg
+                class="w-6 h-6 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="text-gray-200 mt-2 space-y-2">
+            <p>
+              <strong>TATTOO - DEA:</strong> Isključivo putem maila:
+              <a
+                href="mailto:wonderink.tattoo@gmail.com"
+                class="text-red-400 hover:underline"
+                >wonderink.tattoo@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>TATTOO - SAŠA:</strong> Pozivom na
+              <a href="tel:+385995557000" class="text-red-400 hover:underline"
+                >0995557000</a
+              > ili porukom na
+              <a
+                href="https://wa.me/+385995557000"
+                class="text-red-400 hover:underline">WhatsApp</a
+              >
+            </p>
+            <p>
+              <strong>PIERCING:</strong> Pozivom na
+              <a href="tel:+385995279697" class="text-red-400 hover:underline"
+                >0995279697</a
+              > ili porukom na
+              <a
+                href="https://wa.me/+385995279697"
+                class="text-red-400 hover:underline">WhatsApp</a
+              >
+            </p>
+            <p>
+              <strong>BARBER:</strong> Pozivom na
+              <a href="tel:+385995470402" class="text-red-400 hover:underline"
+                >0995470402</a
+              > ili porukom na
+              <a
+                href="https://wa.me/+385995470402"
+                class="text-red-400 hover:underline">WhatsApp</a
+              >
+            </p>
+          </div>
+        </details>
+
+        <!-- Pitanje 2 -->
+        <details class="group">
+          <summary
+            class="flex cursor-pointer items-center justify-between text-lg font-medium text-white py-4"
+          >
+            <span>Koje su cijene usluga?</span>
+            <span class="transition group-open:rotate-180">
+              <svg
+                class="w-6 h-6 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="text-gray-200 mt-2">
+            <p>
+              🔹 <strong>TATTOO</strong> - Početna cijena tetoviranja je 80€
+            </p>
+            <p>
+              Za procjenu cijene ispunite
+              <a href="/kontakt#formular" class="text-red-400 hover:underline"
+                >formular</a
+              >
+            </p>
+            <p>
+              Postoji puno faktora u određivanju cijene tetovaža: veličina,
+              pozicija na tijelu, kompleksnost izvedbe, izrada dizajna i sl.
+              Stoga je zaista potrebno ispuniti formular kako bismo uzeli u
+              obzir sve stavke i dali vam točan iznos cijene vaše željene
+              tetovaže.
+            </p>
+            <p>
+              🔹 <strong>PIERCING & BARBER</strong> - Pogledajte naš
+              <a href="/cjenik" class="text-red-400 hover:underline">cjenik</a>
+            </p>
+          </div>
+        </details>
+
+        <!-- Pitanje 3 -->
+        <details class="group">
+          <summary
+            class="flex cursor-pointer items-center justify-between text-lg font-medium text-white py-4"
+          >
+            <span>Što moram znati prije termina za tetoviranje?</span>
+            <span class="transition group-open:rotate-180">
+              <svg
+                class="w-6 h-6 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-gray-200 mt-2">...</p>
+        </details>
+
+        <!-- Pitanje 4 -->
+        <details class="group">
+          <summary
+            class="flex cursor-pointer items-center justify-between text-lg font-medium text-white py-4"
+          >
+            <span>Moram li se naručiti za konzultacije?</span>
+            <span class="transition group-open:rotate-180">
+              <svg
+                class="w-6 h-6 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-gray-200 mt-2">
+            Da, bilo da su za konzultacije ili sami termin, ne najavljeni
+            dolasci nisu mogući, slanjem upita na mail ili pozivom na broj <a
+              href="tel:+385997589079"
+              class="text-red-400 hover:underline">0997589079</a
+            > možete se naručiti na konzultacije.
+          </p>
+        </details>
+
+        <!-- Pitanje 5 -->
+        <details class="group">
+          <summary
+            class="flex cursor-pointer items-center justify-between text-lg font-medium text-white py-4"
+          >
+            <span>Boli li tetoviranje/piercanje?</span>
+            <span class="transition group-open:rotate-180">
+              <svg
+                class="w-6 h-6 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-gray-200 mt-2">
+            Bol ovisi o djelu tijela koje se pirsa/tetovira Važno je napomenuti
+            da svatko od nas ima različitu toleranciju boli i samim time se ne
+            može objektivno odgovoriti kolika je razina boli za svaku osobu
+            tolerantna.
+          </p>
+        </details>
+
+        <details class="group">
+          <summary
+            class="flex cursor-pointer items-center justify-between text-lg font-medium text-white py-4"
+          >
+            <span>Mogu li se totovirati trudnice ili dojilje?</span>
+            <span class="transition group-open:rotate-180">
+              <svg
+                class="w-6 h-6 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-gray-200 mt-2">
+            Trudnice i dojilje ne tetoviramo. Smatramo da se tijelo buduće majke
+            treba fokusirati na razvoj djeteta te da je zarastanje tetovaže
+            nepotreban napor za tijelo u tom periodu. Zdravlje djeteta i majke
+            je na prvom mjestu i treba izbjegavati bilo kakvu mogućnost
+            komplikacija u tom periodu.
+          </p>
+        </details>
+
+        <details class="group">
+          <summary
+            class="flex cursor-pointer items-center justify-between text-lg font-medium text-white py-4"
+          >
+            <span>Mogu li se tetovirati/piercati maloljetnici?</span>
+            <span class="transition group-open:rotate-180">
+              <svg
+                class="w-6 h-6 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-gray-200 mt-2">
+            U našem studiju ne tetoviramo maloljetnike. Pirsati se mogu djeca od
+            10-te dobi (samo za ušne resice) te maloljentici od 15-te godine uz
+            obavezno prisustvo i pismenu dozvolu roditelja ili skrbnika.
+          </p>
+        </details>
+
+        <details class="group">
+          <summary
+            class="flex cursor-pointer items-center justify-between text-lg font-medium text-white py-4"
+          >
+            <span>Aftercare tatto/piercing?</span>
+            <span class="transition group-open:rotate-180">
+              <svg
+                class="w-6 h-6 text-red-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <p class="text-gray-200 mt-2">
+            Pri završetku termina, tattoo majstor ili piercer detaljno će vam
+            usmenim putem objasniti sve što trebate znati i raditi sa svojom
+            novom tetovažom i piercingom. Upute ćete dobiti i u pismenom obliku.
+            Veoma je bitno pridržavati se uputa koje ste dobili kako ne bi došlo
+            do komplikacija prilikom zarastanja kože.
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+</Layout>

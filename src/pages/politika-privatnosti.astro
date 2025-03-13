@@ -1,0 +1,111 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout>
+  <section class="bg-black text-gray-200 py-16 px-6 sm:px-12 lg:px-24">
+    <div class="max-w-4xl mx-auto">
+      <h1
+        class="text-4xl sm:text-5xl font-bold text-white text-center mb-8 animate-fade-in"
+      >
+        Politika privatnosti
+      </h1>
+
+      <div
+        class="bg-[#1a1312] p-6 sm:p-8 rounded-lg shadow-lg border border-gray-700 animate-fade-in"
+      >
+        <p class="text-lg mb-6">
+          <span class="text-red-500 font-semibold">Wonderink d.o.o.</span> posvećen
+          je zaštiti vaše privatnosti. Ova politika privatnosti objašnjava kako prikupljamo,
+          koristimo i čuvamo vaše podatke kada koristite našu web stranicu.
+        </p>
+
+        <div class="space-y-6">
+          <div>
+            <h2 class="text-2xl font-semibold text-red-400 mb-2">
+              1. Prikupljeni podaci
+            </h2>
+            <p>
+              Jedini podaci koje prikupljamo su oni koje nam dobrovoljno
+              dostavite putem kontakt forme:
+            </p>
+            <ul class="list-disc list-inside mt-2 text-gray-300">
+              <li>Ime i prezime</li>
+              <li>Email adresa</li>
+              <li>Broj telefona (ako je unesen)</li>
+              <li>Poruka</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold text-red-400 mb-2">
+              2. Korištenje podataka
+            </h2>
+            <p>Podatke koristimo isključivo za:</p>
+            <ul class="list-disc list-inside mt-2 text-gray-300">
+              <li>Odgovaranje na upite</li>
+              <li>Dogovaranje termina</li>
+              <li>Komunikaciju vezanu za naše usluge</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold text-red-400 mb-2">
+              3. Čuvanje podataka
+            </h2>
+            <p>
+              Vaši podaci se brišu čim više nisu potrebni za svrhu zbog koje su
+              prikupljeni.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold text-red-400 mb-2">
+              4. Sigurnost podataka
+            </h2>
+            <p>
+              Poduzimamo sve potrebne mjere zaštite kako bismo spriječili
+              neovlašteni pristup, zloupotrebu ili gubitak vaših podataka.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-semibold text-red-400 mb-2">5. Kontakt</h2>
+            <p>Ako imate pitanja, kontaktirajte nas:</p>
+            <ul class="mt-2">
+              <li>
+                <a
+                  href="mailto:wonderink.tatto@gmail.com"
+                  class="text-red-400 hover:underline"
+                  >wonderink.tatto@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+385997589079" class="text-red-400 hover:underline"
+                  >099 758 9079</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 0.8s ease-out;
+    }
+  </style>
+</Layout>

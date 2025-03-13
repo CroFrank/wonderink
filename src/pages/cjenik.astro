@@ -1,0 +1,242 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout>
+  <div class="min-h-screen bg-black text-white py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-100">Cjenik</h2>
+
+      <!-- Grid Container -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+        <!-- Tattoo Card -->
+        <div
+          class="relative h-96 bg-cover bg-center group neon-box-blue"
+          style="background-image: url('/tatto.jpg');"
+        >
+          <div
+            class="absolute inset-0 bg-black opacity-60 group-hover:opacity-80 transition duration-300"
+          >
+          </div>
+          <div
+            class="absolute inset-0 flex flex-col justify-center items-center text-center p-6"
+          >
+            <h3 class="text-3xl font-bold mb-4">Tattoo</h3>
+            <p class="text-gray-200">
+              Cijena tetovaže ovisi o veličini, detaljima i kompleksnosti
+              dizajna.
+            </p>
+            <p class="mt-2 text-gray-400">
+              Za procjenu ispuni <a
+                href="/kontakt#formular"
+                class="text-red-500">formular</a
+              >.
+            </p>
+          </div>
+        </div>
+
+        <!-- Barber Card -->
+        <div
+          class="relative h-96 bg-cover bg-center group neon-box-green"
+          style="background-image: url('barber.jpg');"
+        >
+          <div
+            class="absolute inset-0 bg-black opacity-60 group-hover:opacity-80 transition duration-300"
+          >
+          </div>
+          <div
+            class="absolute inset-0 flex flex-col justify-center items-center text-center p-6"
+          >
+            <h3 class="text-3xl font-bold mb-4">Barber</h3>
+            <ul class="text-gray-200 space-y-2">
+              <li>Šišanje - <span class="text-red-500">15€</span></li>
+              <li>Šišanje i brada - <span class="text-red-500">20€</span></li>
+              <li>Fade šišanje - <span class="text-red-500">20€</span></li>
+              <li>Fade + brada - <span class="text-red-500">25€</span></li>
+              <li>Uređivanje brade - <span class="text-red-500">10€</span></li>
+              <li>Šišanje na nulu - <span class="text-red-500">10€</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Piercing Card -->
+        <div
+          class="relative h-96 bg-cover bg-center group neon-box-pink"
+          style="background-image: url('/piercer.jpg');"
+        >
+          <div
+            class="absolute inset-0 bg-black opacity-60 group-hover:opacity-80 transition duration-300"
+          >
+          </div>
+          <div
+            class="absolute inset-0 flex flex-col justify-center items-center text-center p-6"
+          >
+            <h3 class="text-3xl font-bold mb-4">Piercing</h3>
+            <ul class="text-gray-200 space-y-2">
+              <li>Uho - <span class="text-red-500">40€ - 70€</span></li>
+              <li>Nos - <span class="text-red-500">50€</span></li>
+              <li>Usna - <span class="text-red-500">50€</span></li>
+              <li>Obrva - <span class="text-red-500">50€</span></li>
+              <li>Bridge - <span class="text-red-500">50€</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="min-h-screen bg-black text-white py-12 px-6" id="formular">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-8 text-gray-100">Cjenik</h2>
+
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">
+          Tattoo
+        </h3>
+        <p class="text-gray-400">
+          Cijena tetovaže ovisi o veličini, detaljima i kompleksnosti dizajna.
+          Za procjenu cijene, ispunite naš <a
+            href="/kontakt#formular"
+            class="text-red-500">formular</a
+          >.
+        </p>
+      </div>
+
+      <!-- Barber -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">
+          Barber
+        </h3>
+        <ul class="space-y-3">
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Šišanje</span>
+            <span>15€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Šišanje i brada</span>
+            <span>20€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Fade šišanje</span>
+            <span>20€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Fade šišanje i uređivanje brade</span>
+            <span>25€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Uređivanje brade</span>
+            <span>10€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Šišanje mašinicom na nulu</span>
+            <span>10€</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Piercing -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold mb-4 border-b border-gray-700 pb-2">
+          Piercing
+        </h3>
+
+        <h4 class="text-xl font-medium my-4">Uho</h4>
+        <ul class="space-y-3">
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Resica</span>
+            <span>40€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Helix/foward helix</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Conch</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Tragus/antitragus</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Rook</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Daith</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Snug</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Flat</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Industrial</span>
+            <span>70€</span>
+          </li>
+        </ul>
+
+        <h4 class="text-xl font-medium mb-4 mt-8">Lice</h4>
+        <ul class="space-y-3">
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Obrva</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Nos</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Usna(monroe, labret, medusa, vertical labret)</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span>Bridge</span>
+            <span>50€</span>
+          </li>
+          <li class="flex justify-between border-b border-gray-700 pb-2">
+            <span
+              >Nos/usna simetrija (jedan piercing koji treba pozicionirati
+              simetrično sa već postojećim piercingom)</span
+            >
+            <span>60€</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tattoo -->
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .neon-box-blue {
+    border-radius: 10px;
+    box-shadow:
+      0 0 10px 2px rgba(0, 255, 255, 0.7),
+      0 0 20px 5px rgba(0, 255, 255, 0.5),
+      0 0 40px 10px rgba(0, 255, 255, 0.3);
+  }
+
+  .neon-box-pink {
+    border-radius: 10px;
+    box-shadow:
+      0 0 10px 2px rgba(255, 20, 147, 0.7),
+      0 0 20px 5px rgba(255, 20, 147, 0.5),
+      0 0 40px 10px rgba(255, 20, 147, 0.3);
+  }
+
+  .neon-box-green {
+    border-radius: 10px;
+    box-shadow:
+      0 0 10px 2px rgba(57, 255, 20, 0.7),
+      0 0 20px 5px rgba(57, 255, 20, 0.5),
+      0 0 40px 10px rgba(57, 255, 20, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+</style>

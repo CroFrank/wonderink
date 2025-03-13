@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets"
+import Layout from "../layouts/Layout.astro"
+import Hero from "../assets/images/hero.webp"
+---
+
+<Layout>
+  <div class="flex justify-center items-center min-h-[800px] bg-black">
+    <div
+      class="overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200 w-full max-w-[600px]"
+    >
+      <!-- Image -->
+      <figure>
+        <Image src={Hero} alt="card image" width={600} height={400} />
+      </figure>
+      <!-- Body-->
+      <div class="p-6">
+        <header class="mb-4">
+          <h3 class="text-xl font-medium text-slate-700">wonderink d.o.o.</h3>
+          <p class="text-sm text-slate-500">OIB: 98557477752</p>
+          <p class="text-sm text-slate-500">
+            Zagrebačka 6, 10410 Velika Gorica, Hrvatska
+          </p>
+        </header>
+        <ul>
+          <li>email: wonderink.tatoo@gmail.com</li>
+          <li>mob: +385 99 758 9079</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>
