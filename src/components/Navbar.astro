@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets"
-import Logo from "../assets/images/logo.png"
+import Logo from "../assets/images/w.webp"
 ---
 
 <nav class="p-4">
@@ -8,7 +8,7 @@ import Logo from "../assets/images/logo.png"
     <div class="relative flex items-center justify-between h-14">
       <div class="flex items-center pl-4">
         <a href="/">
-          <Image src={Logo} alt="Logo" width={160} height={100} />
+          <Image src={Logo} alt="Logo" width={50} height={50} />
         </a>
       </div>
 
@@ -66,24 +66,23 @@ import Logo from "../assets/images/logo.png"
 <div id="mobile-menu" class="hidden">
   <div class="px-2 pt-2 pb-3 space-y-1 text-center">
     <a
-      href="#home"
+      href="/"
       class="text-white block px-3 py-2 rounded-md text-base font-medium"
-      >Home</a
+      >NASLOVNICA</a
     >
     <a
-      href="#about"
+      href="/cjenik"
       class="text-white block px-3 py-2 rounded-md text-base font-medium"
-      >About</a
+      >CJENIK</a
     >
     <a
-      href="#services"
-      class="text-white block px-3 py-2 rounded-md text-base font-medium"
-      >Services</a
+      href="/faq"
+      class="text-white block px-3 py-2 rounded-md text-base font-medium">FAQ</a
     >
     <a
-      href="#contact"
+      href="/kontakt"
       class="text-white block px-3 py-2 rounded-md text-base font-medium"
-      >Contact</a
+      >KONTAKT</a
     >
   </div>
 </div>
