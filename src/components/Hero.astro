@@ -5,7 +5,7 @@ import HeroImgSmall from "../assets/images/hero-small.jpg"
 ---
 
 <section
-  class="relative w-full overflow-hidden flex items-center justify-center bg-gray-900 max-h-screen"
+  class="relative w-full overflow-hidden flex items-center justify-center max-h-screen"
 >
   <Image
     src={HeroImg}
@@ -13,6 +13,8 @@ import HeroImgSmall from "../assets/images/hero-small.jpg"
     width={2500}
     height={1667}
     class="object-cover w-full h-full hidden md:block"
+    loading="eager"
+    fetchpriority="high"
   />
   <Image
     src={HeroImgSmall}
@@ -20,6 +22,8 @@ import HeroImgSmall from "../assets/images/hero-small.jpg"
     width={1907}
     height={1667}
     class="object-cover w-full h-full block md:hidden"
+    loading="eager"
+    fetchpriority="high"
   />
 
   <!-- Gradient Overlay -->
@@ -31,10 +35,11 @@ import HeroImgSmall from "../assets/images/hero-small.jpg"
   <div
     class="zoom-in absolute inset-x-0 bottom-[20%] flex items-center justify-center"
   >
-    <button
+    <a
+      href="/kontakt"
       class="bg-transparent border-2 border-white text-white font-bold py-2 px-6 transition-all duration-300 transform hover:bg-white hover:border-white hover:text-black hover:scale-105 tracking-wider text-[10px] sm:text-lg lg:text-xl lg:py-4 lg:px-12"
     >
       KONTAKT
-    </button>
+    </a>
   </div>
 </section>

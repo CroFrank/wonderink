@@ -53,9 +53,98 @@
       </dl>
     </div>
   </div>
+  <div class="logos text-lg text-gray-300 md:text-2xl lg:text-3xl xl:text-5xl">
+    <div class="logos-slide">
+      <span>Gloria</span>
+      <span>Cosmopolitan</span>
+      <span>HRT 2</span>
+      <span>Enter Zagreb</span>
+      <span>VG Danas</span>
+      <span>Cityportal</span>
+      <span>eMeđimurje</span>
+      <span>poslovniFM</span>
+    </div>
+    <div class="logos-slide">
+      <span>Gloria</span>
+      <span>Cosmopolitan</span>
+      <span>HRT 2</span>
+      <span>Enter Zagreb</span>
+      <span>VG Danas</span>
+      <span>Cityportal</span>
+      <span>eMeđimurje</span>
+      <span>poslovniFM</span>
+    </div>
+  </div>
 </div>
 <style>
-  h2 {
+  h2,
+  span {
     font-family: "Cinzel Decorative", "serif";
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos {
+    overflow: hidden;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    white-space: nowrap;
+    position: relative;
+    margin-right: 2px;
+  }
+
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+
+  .logos:before {
+    left: 0;
+    background: linear-gradient(
+      to left,
+      rgba(26, 19, 18, 0),
+      rgba(26, 19, 18, 1)
+    );
+  }
+
+  .logos:after {
+    right: 0;
+    background: linear-gradient(
+      to right,
+      rgba(26, 19, 18, 0),
+      rgba(26, 19, 18, 1)
+    );
+  }
+
+  .logos-slide {
+    animation: 28s slide infinite linear;
+    display: inline-block;
+  }
+
+  .logos-slide span {
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  @media (min-width: 1200px) {
+    .logos-slide span {
+      margin: 0 30px;
+    }
   }
 </style>

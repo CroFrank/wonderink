@@ -2,154 +2,230 @@
 import Layout from "../layouts/Layout.astro"
 ---
 
-<Layout
-  ><div
-    class="min-h-screen bg-black text-white flex items-center justify-center p-6"
-  >
-    <div
-      class="max-w-2xl w-full neon-box-blue p-8 rounded-lg shadow-lg bg-black"
-    >
-      <h2 class="text-3xl font-bold text-center mb-6">Tatto Forma</h2>
+<Layout>
+  <div class="bg-black text-white p-6 pb-20">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold text-center my-16">Kontakt</h1>
 
-      <form
-        action="https://submit-form.com/bVZFZ7c2S"
-        enctype="multipart/form-data"
-      >
-        <!-- Osobne informacije -->
-        <h3 class="text-xl font-semibold mb-4">Osobni podaci</h3>
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label class="block text-gray-300">Ime</label>
-            <input
-              type="text"
-              name="ime"
-              required
-              class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-            />
-          </div>
-          <div>
-            <label class="block text-gray-300">Prezime</label>
-            <input
-              type="text"
-              name="prezime"
-              required
-              class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-            />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 mt-4">
-          <div>
-            <label class="block text-gray-300">Godine</label>
-            <input
-              type="number"
-              name="godine"
-              required
-              class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-            />
-          </div>
-          <div>
-            <label class="block text-gray-300">Email</label>
-            <input
-              type="email"
-              name="email"
-              required
-              class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-            />
-          </div>
-        </div>
-
-        <div class="mt-4">
-          <label class="block text-gray-300">Mobitel</label>
-          <input
-            required
-            type="tel"
-            name="mob"
-            class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
-        </div>
-
-        <!-- Tattoo informacije -->
-        <h3 class="text-xl font-semibold mt-6 mb-4">Tattoo informacije</h3>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
+        <!-- Contact Information Section -->
         <div>
-          <label class="block text-gray-300">Naziv tetovaže</label>
-          <input
-            type="text"
-            name="naziv"
-            required
-            class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
-        </div>
+          <div class="neon-box-green p-8 rounded-lg shadow-lg bg-black mb-8">
+            <h2 class="text-2xl font-bold mb-6">Kontakt informacije</h2>
 
-        <div class="grid grid-cols-2 gap-4 mt-4">
-          <div>
-            <label class="block text-gray-300">Veličina tetovaže (cm)</label>
-            <input
-              type="text"
-              name="velicina"
-              required
-              class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-            />
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4">Adresa</h3>
+              <p class="text-gray-300">Zagrebačka 6</p>
+              <p class="text-gray-300">10410 Velika Gorica, Hrvatska</p>
+            </div>
+
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4">Radno vrijeme</h3>
+              <p class="text-gray-300">Ponedjeljak - Petak: 10:00 - 20:00</p>
+              <p class="text-gray-300">Subota: 12:00 - 18:00</p>
+              <p class="text-gray-300">Po dogovoru</p>
+            </div>
+
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-4">Naš tim</h3>
+
+              <div class="grid grid-cols-2 gap-8">
+                <div class="mb-4">
+                  <p class="font-semibold text-red-500">Dea</p>
+                  <p class="text-gray-300">Tattoo</p>
+                  <p class="text-gray-300">wonderink.tattoo@gmail.com</p>
+                  <p class="text-gray-300">+385 99 758 9079</p>
+                </div>
+
+                <div class="mb-4">
+                  <p class="font-semibold text-red-500">Saša</p>
+                  <p class="text-gray-300">Tattoo</p>
+                  <p class="text-gray-300">+385 99 555 7000</p>
+                  <p class="text-gray-300">Whatsapp</p>
+                </div>
+
+                <div class="mb-4">
+                  <p class="font-semibold text-red-500">Tina</p>
+                  <p class="text-gray-300">Piercer</p>
+                  <p class="text-gray-300">+385 527 9697</p>
+                  <p class="text-gray-300">Whatsapp</p>
+                </div>
+
+                <div class="mb-4">
+                  <p class="font-semibold text-red-500">Luka</p>
+                  <p class="text-gray-300">Barber</p>
+                  <p class="text-gray-300">+385 99 547 0402</p>
+                  <p class="text-gray-300">Whatsapp</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <label class="block text-gray-300">Pozicija na tijelu</label>
-            <input
-              type="text"
-              name="pozicija"
-              required
-              class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-            />
+
+          <!-- Google Map -->
+          <div class="neon-box-pink p-8 rounded-lg shadow-lg bg-black">
+            <h2 class="text-2xl font-bold mb-6">Kako do nas</h2>
+            <div class="w-full h-80 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d640.0476155205254!2d16.073829133203322!3d45.71436196033197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47667f4012cf2865%3A0xe5e2ad72e74df4d!2sWonderink%20Tattoo!5e1!3m2!1shr!2shr!4v1741985593177!5m2!1shr!2shr"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
           </div>
         </div>
 
-        <div class="mt-4">
-          <label class="block text-gray-300">Opis tetovaže</label>
-          <textarea
-            name="opis"
-            rows="3"
-            required
-            class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-          ></textarea>
-        </div>
+        <!-- Form Section -->
+        <div class="neon-box-blue p-8 rounded-lg shadow-lg bg-black">
+          <h2 class="text-3xl font-bold text-center mb-20">Tattoo Forma</h2>
 
-        <!-- Upload slike -->
-        <div class="mt-6">
-          <label class="block text-gray-300">Upload slike (referenca)</label>
-          <input
-            type="file"
-            name="slika"
-            accept="image/*"
-            multiple
-            required
-            class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
-        </div>
-
-        <!-- Checkbox -->
-        <div class="mt-6 flex items-start">
-          <input
-            type="checkbox"
-            id="privatnost"
-            name="privatnost"
-            required
-            class="mr-2 w-5 h-5 bg-gray-700 border-gray-600 rounded focus:ring-2 focus:ring-red-500"
-          />
-          <label for="privatnost" class="text-gray-300"
-            >Slažem se s <a
-              href="/politika-privatnosti"
-              class="text-red-500 underline">politikom privatnosti</a
-            ></label
+          <form
+            action="https://submit-form.com/bVZFZ7c2S"
+            enctype="multipart/form-data"
           >
-        </div>
+            <!-- Osobne informacije -->
+            <h3 class="text-xl font-semibold mb-8">Osobni podaci</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-gray-300">Ime</label>
+                <input
+                  type="text"
+                  name="ime"
+                  required
+                  class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-300">Prezime</label>
+                <input
+                  type="text"
+                  name="prezime"
+                  required
+                  class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+            </div>
 
-        <!-- Gumb za slanje -->
-        <button
-          type="submit"
-          class="w-full mt-6 tracking-wider bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition"
-        >
-          POŠALJI
-        </button>
-      </form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <label class="block text-gray-300">Godine</label>
+                <input
+                  type="number"
+                  name="godine"
+                  required
+                  class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-300">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <label class="block text-gray-300">Mobitel</label>
+              <input
+                required
+                type="tel"
+                name="mob"
+                class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+              />
+            </div>
+
+            <!-- Tattoo informacije -->
+            <h3 class="text-xl font-semibold mb-8 mt-20">Tattoo informacije</h3>
+            <div>
+              <label class="block text-gray-300">Naziv tetovaže</label>
+              <input
+                type="text"
+                name="naziv"
+                required
+                class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <label class="block text-gray-300">Veličina tetovaže (cm)</label
+                >
+                <input
+                  type="text"
+                  name="velicina"
+                  required
+                  class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-300">Pozicija na tijelu</label>
+                <input
+                  type="text"
+                  name="pozicija"
+                  required
+                  class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <label class="block text-gray-300">Opis tetovaže</label>
+              <textarea
+                name="opis"
+                rows="3"
+                required
+                class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+              ></textarea>
+            </div>
+
+            <!-- Upload slike -->
+            <div class="mt-6 mb-16">
+              <label class="block text-gray-300">Upload slike (referenca)</label
+              >
+              <input
+                type="file"
+                name="slika"
+                accept="image/*"
+                multiple
+                required
+                class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+              />
+            </div>
+
+            <!-- Checkbox -->
+            <div class="mt-6 flex items-start">
+              <input
+                type="checkbox"
+                id="privatnost"
+                name="privatnost"
+                required
+                class="mr-2 w-5 h-5 bg-gray-700 border-gray-600 rounded focus:ring-2 focus:ring-red-500"
+              />
+              <label for="privatnost" class="text-gray-300"
+                >Slažem se s <a
+                  href="/politika-privatnosti"
+                  class="text-red-500 underline">politikom privatnosti</a
+                ></label
+              >
+            </div>
+
+            <!-- Gumb za slanje -->
+            <button
+              type="submit"
+              class="w-full mt-6 tracking-wider bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition"
+            >
+              POŠALJI
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </Layout>
