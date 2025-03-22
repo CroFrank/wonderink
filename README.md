@@ -1,48 +1,51 @@
-# Astro Starter Kit: Basics
+# Wonderink d.o.o – Službena Web Stranica
 
-```sh
-npm create astro@latest -- --template basics
-```
+Wonderink d.o.o.
+OIB: 98557477752
+Zagrebačka 6, 10410 VG
+email: wonderink.tattoo@gmail.com
+mob: 099 758 9079
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Ovo je službena web stranica tvrtke Wonderink d.o.o, izrađena za promociju njihovih usluga. Web stranica omogućuje korisnicima da saznaju više o tvrtki, pregledaju ponudu usluga i stupe u kontakt s njima putem ugrađenog obrasca.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tehnologije
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Projekt je izrađen korištenjem sljedećih tehnologija:
 
-## 🚀 Project Structure
+- Hosting: Vercel
+- Domain: **_nadodati i datum_**
+- Frontend: Astrojs
+- Styling: Tailwind, CSS
+- Fonts: Google font - Cinzel
+- Backend: n/a
+- Baza podataka: n/a
+- Widgets: Google map embeded
+- Kontakt forma: formbold.com
+- Render: SSG
+- Backup: Github, local storage
 
-Inside of your Astro project, you'll see the following folders and files:
+## Sadržaj
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Images: Wonderink d.o.o
+- Texts: Wonderink d.o.o
+- Data(links, info, contacts) - Wonderink d.o.o
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Korištenje
 
-## 🧞 Commands
+- Kontakt forma (files attachment)
 
-All commands are run from the root of the project, from a terminal:
+## Održavanje
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- basic 80€/year
+- bit će za file attachemnt
 
-## 👀 Want to learn more?
+## GDPR
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- politika privatnosti
+- kontakt forma
+- cookies - google maps
+
+## Autori i kontakt
+
+Projekt je izradio obrt Bonani za Wonderink d.o.o.
+Za podršku i dodatne informacije, kontaktirajte: info@weblifesupport.com

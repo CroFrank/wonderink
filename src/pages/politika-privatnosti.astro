@@ -6,13 +6,13 @@ import Layout from "../layouts/Layout.astro"
   <section class="bg-black text-gray-200 py-16 px-6 sm:px-12 lg:px-24">
     <div class="max-w-4xl mx-auto">
       <h1
-        class="text-4xl sm:text-5xl font-bold text-white text-center mb-16 animate-fade-in"
+        class="text-4xl sm:text-5xl font-bold text-white text-center mb-16 scroll-animation"
       >
         Politika privatnosti
       </h1>
 
       <div
-        class="neon-box-pink p-6 sm:p-8 rounded-lg shadow-lg border border-gray-700 animate-fade-in"
+        class="neon-box-pink p-6 sm:p-8 rounded-lg shadow-lg border border-gray-700 scroll-animation"
       >
         <p class="text-lg mb-6">
           <span class="text-red-500 font-semibold">Wonderink d.o.o.</span> posvećen
@@ -70,6 +70,51 @@ import Layout from "../layouts/Layout.astro"
           </div>
 
           <div>
+            <h2 class="text-2xl font-semibold text-red-400 mb-2">
+              5. Kolačići
+            </h2>
+            <h3>Google maps</h3>
+            <p>
+              Naša web stranica omogućuje korištenje Google Maps usluge, koju
+              pruža Google LLC. Ova usluga može postaviti kolačiće trećih strana
+              kako bi omogućila funkcionalnost karte. Google Maps na našoj
+              stranici nije automatski učitan. Karta se učitava samo ako
+              korisnik to izričito odabere klikom na gumb "Učitaj kartu".
+              Prilikom učitavanja, pristajete na Googleove kolačiće i pravila
+              privatnosti.
+            </p>
+            <p>Ti kolačići koriste se za:</p>
+            <ul>
+              <li>- Omogućavanje pravilnog prikaza interaktivne karte.</li>
+              <li>- Pamćenje korisničkih postavki vezanih uz kartu.</li>
+              <li>- Poboljšanje funkcionalnosti i korisničkog iskustva.</li>
+            </ul>
+            <p>Upravljanje kolačićima:</p>
+            <p>
+              Ako ne učitate Google kartu, kolačići neće biti spremljeni u vaš
+              preglednik.
+            </p>
+            <p>
+              Ako ste već prihvatili učitavanje karte i želite obrisati
+              kolačiće, možete to učiniti kroz postavke vašeg preglednika.
+            </p>
+            <p>
+              Više informacija o kolačićima koje koristi Google Maps možete
+              pronaći na:
+            </p>
+            <a
+              href="https://policies.google.com/privacy"
+              class="text-blue-500"
+              target="_blank">Googleova pravila privatnosti</a
+            > i
+            <a
+              href="https://policies.google.com/technologies/cookies"
+              class="text-blue-500"
+              target="_blank">Googleova pravila o kolačićima</a
+            >.
+          </div>
+
+          <div>
             <h2 class="text-2xl font-semibold text-red-400 mb-2">5. Kontakt</h2>
             <p>Ako imate pitanja, kontaktirajte nas:</p>
             <ul class="mt-2">
@@ -91,21 +136,4 @@ import Layout from "../layouts/Layout.astro"
       </div>
     </div>
   </section>
-
-  <style>
-    @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fade-in {
-      animation: fade-in 0.8s ease-out;
-    }
-  </style>
 </Layout>
