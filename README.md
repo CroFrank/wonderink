@@ -45,6 +45,10 @@ Projekt je izrađen korištenjem sljedećih tehnologija:
 - kontakt forma
 - cookies - google maps
 
+## Licenses
+
+OFL - Google Font - Cinzel
+
 ## Autori i kontakt
 
 Projekt je izradio obrt Bonani za Wonderink d.o.o.

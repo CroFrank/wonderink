@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets"
-import Logo from "../assets/images/logo-small.webp"
+import Logo from "../assets/images/logo-small.svg"
 ---
 
-<nav class="p-4">
+<nav class="py-4">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div class="relative flex items-center justify-between h-14">
       <div class="flex items-center pl-4">
         <a href="/">
-          <Image src={Logo} alt="Logo" width={50} height={37} />
+          <Image src={Logo} alt="Logo" width={50} height={50} />
         </a>
       </div>
 
