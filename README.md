@@ -34,6 +34,10 @@ Projekt je izrađen korištenjem sljedećih tehnologija:
 
 - Kontakt forma (files attachment)
 
+## 3rd party
+
+- kontakt forma + files handling (Formcarry.com)
+
 ## Održavanje
 
 - basic 80€/year

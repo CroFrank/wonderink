@@ -1,63 +1,46 @@
 import { useRef, useState } from "react"
 
-const ContactForm = () => {
+const ContactForm2 = () => {
+  const formRef = useRef<HTMLFormElement>(null)
+
+  const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [failure, setFailure] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [formData, setFormData] = useState({
-    ime: "",
-    prezime: "",
-    godine: "",
-    email: "",
-    mob: "",
-    nazivTetovaze: "",
-    velicina: "",
-    pozicija: "",
-    opis: "",
-    privatnost: false,
-    slike: [] as File[],
-  })
 
-  const fileInputRef = useRef<HTMLInputElement | null>(null)
+  const validMimeTypes = ["image/jpeg", "image/png"]
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value, type } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]:
-        type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
-    }))
-  }
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files
-    if (!files) return
-    setFormData((prev) => ({
-      ...prev,
-      slike: Array.from(files),
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const sendFormData = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
     setLoading(true)
-    const submitData = new FormData()
-    Object.entries(formData).forEach(([key, value]) => {
-      if (key === "slike" && Array.isArray(value)) {
-        value.forEach((file, index) => {
-          submitData.append(`slike[${index}]`, file)
-        })
-      } else {
-        submitData.append(key, value as string)
-      }
-    })
+
+    if (!formRef.current) {
+      console.log("something wrong with form ref")
+      setLoading(false)
+      return
+    }
+
+    const formData = new FormData(formRef.current)
+
+    const files = formData.getAll("slike") as File[]
+    const invalidFiles = files.filter(
+      (file) => !validMimeTypes.includes(file.type)
+    )
+
+    if (invalidFiles.length > 0) {
+      console.warn("Invalid file type detected")
+      setFailure(true)
+      setLoading(false)
+      setTimeout(() => setFailure(false), 4000)
+      return
+    }
 
     try {
       const response = await fetch("https://formcarry.com/s/12c5Xn7v5_N", {
         method: "POST",
-        body: submitData,
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
       })
 
       if (!response.ok) {
@@ -77,23 +60,8 @@ const ContactForm = () => {
         setFailure(false)
       }, 4000)
     } finally {
+      formRef.current.reset()
       setLoading(false)
-      setFormData({
-        ime: "",
-        prezime: "",
-        godine: "",
-        email: "",
-        mob: "",
-        nazivTetovaze: "",
-        velicina: "",
-        pozicija: "",
-        opis: "",
-        privatnost: false,
-        slike: [] as File[],
-      })
-      if (fileInputRef.current) {
-        fileInputRef.current.value = ""
-      }
     }
   }
 
@@ -101,15 +69,13 @@ const ContactForm = () => {
     <>
       <div className="neon-box-blue p-8 rounded-lg shadow-lg bg-black">
         <h2 className="text-3xl font-bold text-center mb-20">Tattoo Forma</h2>
-        <form onSubmit={handleSubmit}>
+        <form ref={formRef} onSubmit={sendFormData}>
           <h3 className="text-xl font-semibold mb-8">Osobni podaci</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
               name="ime"
               placeholder="Ime"
-              onChange={handleChange}
-              value={formData.ime}
               className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
               required
             />
@@ -117,20 +83,18 @@ const ContactForm = () => {
               type="text"
               name="prezime"
               placeholder="Prezime"
-              onChange={handleChange}
-              value={formData.prezime}
               className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
               required
             />
           </div>
+
+          <input type="hidden" name="_gotcha" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <input
               type="number"
               name="godine"
               placeholder="Godine"
-              onChange={handleChange}
-              value={formData.godine}
               className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
               required
             />
@@ -138,8 +102,6 @@ const ContactForm = () => {
               type="email"
               name="email"
               placeholder="Email"
-              onChange={handleChange}
-              value={formData.email}
               className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
               required
             />
@@ -149,8 +111,6 @@ const ContactForm = () => {
             type="tel"
             name="mob"
             placeholder="Mobitel"
-            onChange={handleChange}
-            value={formData.mob}
             className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded mt-4"
             required
           />
@@ -162,8 +122,6 @@ const ContactForm = () => {
             type="text"
             name="nazivTetovaze"
             placeholder="Naziv tetovaže"
-            onChange={handleChange}
-            value={formData.nazivTetovaze}
             className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
             required
           />
@@ -173,8 +131,6 @@ const ContactForm = () => {
               type="text"
               name="velicina"
               placeholder="Veličina tetovaže (cm)"
-              onChange={handleChange}
-              value={formData.velicina}
               className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
               required
             />
@@ -182,8 +138,6 @@ const ContactForm = () => {
               type="text"
               name="pozicija"
               placeholder="Pozicija na tijelu"
-              onChange={handleChange}
-              value={formData.pozicija}
               className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
               required
             />
@@ -193,8 +147,6 @@ const ContactForm = () => {
             name="opis"
             rows={3}
             placeholder="Opis tetovaže"
-            onChange={handleChange}
-            value={formData.opis}
             className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded mt-4"
             required
           ></textarea>
@@ -206,19 +158,18 @@ const ContactForm = () => {
               name="slike"
               multiple
               accept="image/*"
-              ref={fileInputRef}
-              onChange={handleFileChange}
               className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded"
               required
             />
+            <p className="pt-2 text-gray-100 text-sm">
+              max. 10MB veličina slike, formati JPG i PNG{" "}
+            </p>
           </div>
 
           <div className="mt-6 flex items-start">
             <input
               type="checkbox"
               name="privatnost"
-              onChange={handleChange}
-              checked={formData.privatnost}
               className="mr-2 w-5 h-5 bg-gray-700 border-gray-600 rounded"
               required
             />
@@ -235,12 +186,18 @@ const ContactForm = () => {
 
           <button
             type="submit"
-            className="w-full mt-6 bg-red-700 hover:bg-red-800 text-white font-semibold py-3 rounded-lg transition"
+            className={`w-full mt-6 bg-red-700 hover:bg-red-800 text-white font-semibold py-3 rounded-lg transition ${
+              loading ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            disabled={loading}
           >
-            {loading ? "ŠALJEM..." : "POŠALJI"}
+            {loading ? "Slanje..." : "Pošalji"}
           </button>
         </form>
       </div>
+
+      {/* Toast notifications */}
+
       <div
         id="toast-success"
         className={`fixed top-5 right-5 ${
@@ -376,5 +333,4 @@ const ContactForm = () => {
     </>
   )
 }
-
-export default ContactForm
+export default ContactForm2
