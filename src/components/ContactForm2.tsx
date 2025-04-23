@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { toast } from "sonner"
 
 const ContactForm2 = () => {
@@ -17,13 +17,29 @@ const ContactForm2 = () => {
     }
 
     const formData = new FormData(formRef.current)
-    const files = formData.getAll("slike") as File[]
+    const files = [
+      ...(formData.getAll("pozicija-slike") as File[]),
+      ...(formData.getAll("primjeri-slike") as File[]),
+    ]
     const invalidFiles = files.filter(
       (file) => !validMimeTypes.includes(file.type)
     )
 
     if (invalidFiles.length > 0) {
       toast("Nedozvoljen format slike!", {
+        action: {
+          label: "X",
+          onClick: () => console.log("Undo"),
+        },
+      })
+      setLoading(false)
+      return
+    }
+
+    const totalSizeMB =
+      files.reduce((acc, file) => acc + file.size, 0) / (1024 * 1024)
+    if (totalSizeMB > 10) {
+      toast("Ukupna veličina slika prelazi 10MB!", {
         action: {
           label: "X",
           onClick: () => console.log("Undo"),
@@ -147,9 +163,7 @@ const ContactForm2 = () => {
         <p className="pt-2 text-gray-100 text-sm">
           potrebno je učitati fotografiju dijela tijela kojeg želite tetovirati
         </p>
-        <p className="pt-2 text-gray-400 text-sm">
-          max. 10MB veličina slike, formati JPG i PNG{" "}
-        </p>
+
         <input
           type="file"
           name="primjeri-slike"
@@ -161,8 +175,8 @@ const ContactForm2 = () => {
         <p className="pt-2 text-gray-100 text-sm">
           učitajte primjere tetovaža koje vam se sviđaju{" "}
         </p>
-        <p className="pt-2 text-gray-400 text-sm">
-          max. 10MB veličina slike, formati JPG i PNG{" "}
+        <p className="pt-4 text-gray-400 text-sm">
+          ukupno max. 10MB, formati JPG i PNG{" "}
         </p>
         <div className="mt-6 flex items-start">
           <input
