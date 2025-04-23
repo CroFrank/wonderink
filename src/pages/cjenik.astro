@@ -1,16 +1,27 @@
 ---
+import Service from "../components/Service.astro"
 import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout>
-  <div class="min-h-screen bg-black text-white py-12 px-6">
-    <div class="max-w-7xl mx-auto mb-12 scroll-animation">
-      <h2 class="text-4xl font-bold text-center my-20 text-gray-100">
-        Wonderink cjenik
+  <div class="min-h-screen bg-black py-12 px-6 relative">
+    <!-- overlay -->
+    <div
+      class="absolute top-0 left-0 w-full h-1/5 bg-gradient-to-b from-[#1a1312] to-transparent"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-[#1a1312] to-transparent"
+    >
+    </div>
+    <!-- overlay end -->
+    <div class="max-w-7xl mx-auto mb-12 scroll-animation font-light">
+      <h2 class="text-3xl tracking-wider sm:text-5xl text-center my-20">
+        CJENIK
       </h2>
 
       <!-- Grid Container -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
         <!-- Tattoo Card -->
         <div
           class="relative bg-cover bg-center group neon-box-blue min-h-[700px]"
@@ -23,17 +34,70 @@ import Layout from "../layouts/Layout.astro"
           <div
             class="absolute inset-0 flex flex-col justify-center items-center text-center p-6"
           >
-            <h3 class="text-3xl font-bold mb-4">Tattoo</h3>
-            <p class="text-gray-200">
-              Cijena tetovaže ovisi o veličini, detaljima i kompleksnosti
-              dizajna.
-            </p>
-            <p class="mt-2 text-gray-300">
-              Za procjenu ispuni <a
-                href="/kontakt#formular"
-                class="text-red-500">formular</a
-              >.
-            </p>
+            <h3 class="text-2xl font-medium mb-4 tracking-wide">TATTOO</h3>
+            <div class="text-left">
+              <p>Postoji puno faktora u određivanju cijene:</p>
+              <p class="mt-3">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>VELIČINA</li>
+                  <li>POZICIJA NA TIJELU</li>
+                  <li>KOMPLEKSNOST IZVEDBE</li>
+                  <li>IZRADA DIZAJNA</li>
+                </ul>
+              </p>
+              <p class="mt-5">
+                Stoga je zaista potrebno ispuniti formular kako bismo uzeli u
+                obzir sve stavke i dali vam točan iznos cijene vaše željene
+                tetovaže.
+              </p>
+              <p class="mt-2">
+                Za procjenu ispuni <a
+                  href="/kontakt#formular"
+                  class="text-red-500 hover:underline formular">formular</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Piercing Card -->
+        <div
+          class="relative bg-cover bg-center group neon-box-pink min-h-[800px]"
+          style="background-image: url('/piercer.jpg');"
+        >
+          <div
+            class="absolute inset-0 bg-black opacity-60 group-hover:opacity-80 transition duration-300 rounded-lg"
+          >
+          </div>
+          <div
+            class="absolute inset-0 flex flex-col justify-center items-center text-center p-6"
+          >
+            <h3 class="text-2xl font-medium mb-4 tracking-wide">PIERCING</h3>
+            <ul class="space-y-2">
+              <h4 class="font-medium pb-3">UHO</h4>
+              <Service service="Resica" price="40" />
+              <Service service="Helix/foward helix" price="50" />
+              <Service service="Conch" price="50" />
+              <Service service="Tragus/antitragus" price="50" />
+              <Service service="Rook" price="50" />
+              <Service service="Daith" price="50" />
+              <Service service="Snug" price="50" />
+              <Service service="Flat" price="50" />
+              <Service service="Industrial" price="70" />
+
+              <h4 class="font-medium py-3">LICE</h4>
+              <Service service="Obrva" price="50" />
+              <Service service="Nos" price="50" />
+              <Service
+                service="Usna(monroe, labret, medusa, vertical labret)"
+                price="50"
+              />
+              <Service service="Bridge" price="50" />
+              <Service
+                service="Nos/usna simetrija (jedan piercing koji treba pozicionirati simetrično sa već postojećim piercingom)"
+                price="60"
+              />
+            </ul>
           </div>
         </div>
 
@@ -49,66 +113,14 @@ import Layout from "../layouts/Layout.astro"
           <div
             class="absolute inset-0 flex flex-col justify-center items-center text-center p-6"
           >
-            <h3 class="text-3xl font-bold mb-4">Barber</h3>
-            <ul class="text-gray-200 space-y-2">
-              <li>Šišanje - <span class="text-red-500">15€</span></li>
-              <li>Šišanje i brada - <span class="text-red-500">20€</span></li>
-              <li>Fade šišanje - <span class="text-red-500">20€</span></li>
-              <li>
-                Fade šišanje i uređivanje brade - <span class="text-red-500"
-                  >25€</span
-                >
-              </li>
-              <li>Uređivanje brade - <span class="text-red-500">10€</span></li>
-              <li>
-                Šišanje mašinicom na nulu - <span class="text-red-500">10€</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Piercing Card -->
-        <div
-          class="relative bg-cover bg-center group neon-box-pink min-h-[700px]"
-          style="background-image: url('/piercer.jpg');"
-        >
-          <div
-            class="absolute inset-0 bg-black opacity-60 group-hover:opacity-80 transition duration-300 rounded-lg"
-          >
-          </div>
-          <div
-            class="absolute inset-0 flex flex-col justify-center items-center text-center p-6"
-          >
-            <h3 class="text-3xl font-bold mb-4">Piercing</h3>
-            <ul class="text-gray-200 space-y-2">
-              <h3>UHO</h3>
-              <li>Resica - <span class="text-red-500">40€</span></li>
-              <li>
-                Helix/foward helix - <span class="text-red-500">50€</span>
-              </li>
-              <li>Conch - <span class="text-red-500">50€</span></li>
-              <li>Tragus/antitragus - <span class="text-red-500">50€</span></li>
-              <li>Rook - <span class="text-red-500">50€</span></li>
-              <li>Daith - <span class="text-red-500">50€</span></li>
-              <li>Snug - <span class="text-red-500">50€</span></li>
-              <li>Flat - <span class="text-red-500">50€</span></li>
-              <li>Industrial - <span class="text-red-500">70€</span></li>
-              <h3>LICE</h3>
-              <li>Obrva - <span class="text-red-500">50€</span></li>
-              <li>Nos - <span class="text-red-500">50€</span></li>
-              <li>
-                Usna(monroe, labret, medusa, vertical labret) - <span
-                  class="text-red-500">50€</span
-                >
-              </li>
-              <li>Bridge - <span class="text-red-500">50€</span></li>
-              <li>
-                Nos/usna simetrija (jedan piercing koji treba pozicionirati
-                simetrično sa već postojećim piercingom) - <span
-                  class="text-red-500">60€</span
-                >
-              </li>
+            <h3 class="text-2xl font-medium mb-4 tracking-wide">BARBER</h3>
+            <ul class="space-y-2 w-full">
+              <Service service="Šišanje" price="15" />
+              <Service service="Šišanje i brada" price="20" />
+              <Service service="Fade šišanje" price="20" />
+              <Service service="Fade šišanje i uređivanje brade" price="25" />
+              <Service service="Uređivanje brade" price="10" />
+              <Service service="Šišanje mašinicom na nulu" price="10" />
             </ul>
           </div>
         </div>
@@ -116,3 +128,8 @@ import Layout from "../layouts/Layout.astro"
     </div>
   </div>
 </Layout>
+<style>
+  .formular {
+    font-weight: 400;
+  }
+</style>

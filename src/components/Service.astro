@@ -1,0 +1,15 @@
+---
+interface Props {
+  service: string
+  price: string
+}
+
+const { service, price } = Astro.props
+---
+
+<li
+  class="flex justify-between border-b border-dotted border-white pb-1 items-end"
+>
+  <span class="text-left">{service.toUpperCase()}</span>
+  <span class="font-bold">{price}€</span>
+</li>
