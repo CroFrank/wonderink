@@ -1,4 +1,16 @@
-Copyright (c) 2012 Natanael Gama (info@ndiscovered.com), with Reserved Font Name 'Cinzel'
+-----------------------------------------------------------
+Font Licenses for this Project
+-----------------------------------------------------------
+
+1. Cinzel
+
+Copyright (c) 2012 Natanael Gama (info@ndiscovered.com)
+Reserved Font Name: "Cinzel"
+
+2. Montserrat
+
+Copyright 2024 The Montserrat.Git Project Authors (https://github.com/JulietaUla/Montserrat.git)
+Reserved Font Name: "Montserrat"
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
