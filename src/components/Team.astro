@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets"
+import { Camera } from "lucide-react"
 
 interface Props {
   title: string
@@ -24,7 +25,7 @@ const { title, text, imageUrl, instagramUrl, position, pt, instagramText } =
     >
       <!-- Slika komponent -->
       <div class="w-full md:w-1/2">
-        <div class="overflow-hidden rounded-lg shadow-lg">
+        <div class="overflow-hidden rounded-lg shadow-lg relative">
           <Image
             src={imageUrl}
             alt={title}
@@ -32,6 +33,12 @@ const { title, text, imageUrl, instagramUrl, position, pt, instagramText } =
             height={800}
             class="hover:scale-105 transition-transform duration-600"
           />
+          <div
+            class="absolute bottom-1 xl:bottom-6 right-1/4 transform translate-x-1/2 flex items-center"
+          >
+            <Camera className="inline pr-2 h-5 w-5 md:h-6 md:w-6" />
+            <span class="text-xs lg:text-sm">Jeffrey Jemrić</span>
+          </div>
         </div>
       </div>
 

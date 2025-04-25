@@ -45,44 +45,75 @@
       </dl>
     </div>
   </div>
-  <div class="logos text-lg text-gray-300 md:text-2xl lg:text-3xl xl:text-5xl">
+  <div class="logos">
     <div class="logos-slide">
-      <span>Gloria</span>
-      <span>Cosmopolitan</span>
-      <span>HRT 2</span>
-      <span>Enter Zagreb</span>
-      <span>VG Danas</span>
-      <span>Cityportal</span>
-      <span>eMeđimurje</span>
-      <span>poslovniFM</span>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/gloria.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img
+          src="/src/assets/images/cosmopolitan.png"
+          alt="cosmopolitan logo"
+        />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/hrt-2.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/enter.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/vgdanas.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img
+          src="/src/assets/images/city-velika-gorica.webp"
+          alt="cosmopolitan logo"
+        />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/em.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/poslovnifm2.png" alt="cosmopolitan logo" />
+      </div>
     </div>
+
     <div class="logos-slide">
-      <span>Gloria</span>
-      <span>Cosmopolitan</span>
-      <span>HRT 2</span>
-      <span>Enter Zagreb</span>
-      <span>VG Danas</span>
-      <span>Cityportal</span>
-      <span>eMeđimurje</span>
-      <span>poslovniFM</span>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/gloria.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img
+          src="/src/assets/images/cosmopolitan.png"
+          alt="cosmopolitan logo"
+        />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/hrt-2.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/enter.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/vgdanas.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img
+          src="/src/assets/images/city-velika-gorica.webp"
+          alt="cosmopolitan logo"
+        />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/em.png" alt="cosmopolitan logo" />
+      </div>
+      <div class="img-wrapper">
+        <img src="/src/assets/images/poslovnifm2.png" alt="cosmopolitan logo" />
+      </div>
     </div>
   </div>
 </div>
 <style>
-  h2,
-  span {
-    font-family: "Cinzel Decorative", "serif";
-  }
-
-  @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
   .logos {
     overflow: hidden;
     padding-top: 100px;
@@ -94,6 +125,68 @@
 
   .logos:hover .logos-slide {
     animation-play-state: paused;
+  }
+
+  .logos-slide {
+    animation: 20s slide infinite linear;
+    display: inline-block;
+  }
+
+  .img-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 130px;
+    height: 50px;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    height: 50px;
+    width: auto;
+  }
+
+  @media (min-width: 600px) {
+    .img-wrapper {
+      margin-right: 30px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .img-wrapper {
+      margin-right: 60px;
+    }
+  }
+  @media (max-width: 1600px) {
+    .img-wrapper {
+      margin-right: 65px;
+      height: 65px;
+    }
+    img {
+      height: 65px;
+    }
+  }
+  @media (min-width: 1600px) {
+    .img-wrapper {
+      margin-right: 85px;
+      height: 85px;
+    }
+    img {
+      height: 85px;
+    }
+  }
+
+  @media (min-width: 1900px) {
+    .img-wrapper {
+      margin-right: 150px;
+      height: 110px;
+    }
+    img {
+      height: 110px;
+    }
   }
 
   .logos:before,
@@ -124,19 +217,12 @@
     );
   }
 
-  .logos-slide {
-    animation: 28s slide infinite linear;
-    display: inline-block;
-  }
-
-  .logos-slide span {
-    display: inline-block;
-    margin: 0 20px;
-  }
-
-  @media (min-width: 1200px) {
-    .logos-slide span {
-      margin: 0 30px;
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
     }
   }
 </style>

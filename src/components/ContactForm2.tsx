@@ -161,7 +161,8 @@ const ContactForm2 = () => {
           required
         />
         <p className="pt-2 text-gray-100 text-sm">
-          potrebno je učitati fotografiju dijela tijela kojeg želite tetovirati
+          potrebno je učitati fotografiju vašeg dijela tijela kojeg želite
+          tetovirati
         </p>
 
         <input

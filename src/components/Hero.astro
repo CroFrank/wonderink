@@ -2,6 +2,7 @@
 import { Image } from "astro:assets"
 import HeroImg from "../assets/images/hero.webp"
 import HeroImgSmall from "../assets/images/hero-small.jpg"
+import { Camera } from "lucide-react"
 ---
 
 <section
@@ -25,7 +26,10 @@ import HeroImgSmall from "../assets/images/hero-small.jpg"
     loading="eager"
     fetchpriority="high"
   />
-
+  <div class="absolute bottom-1 xl:bottom-6 right-5 flex items-center z-50">
+    <Camera className="inline pr-2 h-5 w-5 md:h-6 md:w-6" />
+    <span class="text-xs lg:text-sm">Jeffrey Jemrić</span>
+  </div>
   <!-- Gradient Overlay -->
   <div
     class="absolute bottom-0 left-0 w-full h-1/5 bg-gradient-to-t from-[#1a1312] to-transparent"

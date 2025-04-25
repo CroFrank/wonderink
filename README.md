@@ -41,7 +41,7 @@ Projekt je izrađen korištenjem sljedećih tehnologija:
 ## Održavanje
 
 - basic 80€/year
-- bit će za file attachemnt
+- formcarry
 
 ## GDPR
 
@@ -51,7 +51,7 @@ Projekt je izrađen korištenjem sljedećih tehnologija:
 
 ## Licenses
 
-OFL - Google Font - Cinzel
+OFL - Google Font - Cinzel, Monserrat
 
 ## Autori i kontakt
 
