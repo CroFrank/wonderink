@@ -13,14 +13,14 @@ Ovo je službena web stranica tvrtke Wonderink d.o.o, izrađena za promociju nji
 Projekt je izrađen korištenjem sljedećih tehnologija:
 
 - Hosting: Vercel
-- Domain: **_nadodati i datum_**
+- Domain: 29.04.2025. - wonderink.hr - domene.hr(CARNET)
 - Frontend: Astrojs
 - Styling: Tailwind, CSS
-- Fonts: Google font - Cinzel
+- Fonts: Google font - Cinzel, Monserrat
 - Backend: n/a
 - Baza podataka: n/a
 - Widgets: Google map embeded
-- Kontakt forma: formbold.com
+- Kontakt forma: formcarry.com
 - Render: SSG
 - Backup: Github, local storage
 
@@ -40,7 +40,7 @@ Projekt je izrađen korištenjem sljedećih tehnologija:
 
 ## Održavanje
 
-- basic 80€/year
+- basic - yearly
 - formcarry
 
 ## GDPR

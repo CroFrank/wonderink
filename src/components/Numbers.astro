@@ -2,12 +2,12 @@
 import { Image } from "astro:assets"
 import Gloria from "../assets/images/gloria.png"
 import Cosmopolitan from "../assets/images/cosmopolitan.png"
-import HRT2 from "../assets/images/hrt-2.png"
+import HRT2 from "../assets/images/hrt2.png"
 import Enter from "../assets/images/enter.png"
 import VGDanas from "../assets/images/vgdanas.png"
 import CityVelikaGorica from "../assets/images/city-velika-gorica.webp"
 import EM from "../assets/images/em.png"
-import PoslovniFM from "../assets/images/poslovnifm2.png"
+import PoslovniFM from "../assets/images/poslovnifm.png"
 ---
 
 <div
@@ -59,56 +59,60 @@ import PoslovniFM from "../assets/images/poslovnifm2.png"
   </div>
   <div class="logos">
     <div class="logos-slide">
-      <div class="img-wrapper">
-        <Image src={Gloria} alt="gloria" />
-      </div>
-      <div class="img-wrapper">
+      <div class="img-wrapper cosmopolitan">
         <Image src={Cosmopolitan} alt="cosmopolitan" />
       </div>
-      <div class="img-wrapper">
-        <Image src={HRT2} alt="hrt2" />
-      </div>
-      <div class="img-wrapper">
-        <Image src={Enter} alt="enter-zagreb" />
-      </div>
-      <div class="img-wrapper">
+
+      <div class="img-wrapper vgdanas">
         <Image src={VGDanas} alt="vgdanas" />
+      </div>
+      <div class="img-wrapper hrt2">
+        <Image src={HRT2} alt="hrt2" class="h-16 w-auto" />
+      </div>
+      <div class="img-wrapper enter">
+        <Image src={Enter} alt="enter-zagreb" />
       </div>
       <div class="img-wrapper">
         <Image src={CityVelikaGorica} alt="city-velika-gorica" />
       </div>
-      <div class="img-wrapper">
-        <Image src={EM} alt="em" />
+
+      <div class="img-wrapper gloria">
+        <Image src={Gloria} alt="gloria" />
       </div>
-      <div class="img-wrapper">
+      <div class="img-wrapper poslovnifm">
         <Image src={PoslovniFM} alt="poslovnifm" />
+      </div>
+      <div class="img-wrapper em">
+        <Image src={EM} alt="em" />
       </div>
     </div>
 
     <div class="logos-slide">
-      <div class="img-wrapper">
-        <Image src={Gloria} alt="gloria" />
-      </div>
-      <div class="img-wrapper">
+      <div class="img-wrapper cosmopolitan">
         <Image src={Cosmopolitan} alt="cosmopolitan" />
       </div>
-      <div class="img-wrapper">
+
+      <div class="img-wrapper vgdanas">
+        <Image src={VGDanas} alt="vgdanas" />
+      </div>
+      <div class="img-wrapper hrt2">
         <Image src={HRT2} alt="hrt2" />
       </div>
-      <div class="img-wrapper">
+      <div class="img-wrapper enter">
         <Image src={Enter} alt="enter-zagreb" />
-      </div>
-      <div class="img-wrapper">
-        <Image src={VGDanas} alt="vgdanas" />
       </div>
       <div class="img-wrapper">
         <Image src={CityVelikaGorica} alt="city-velika-gorica" />
       </div>
-      <div class="img-wrapper">
-        <Image src={EM} alt="em" />
+
+      <div class="img-wrapper gloria">
+        <Image src={Gloria} alt="gloria" />
       </div>
-      <div class="img-wrapper">
+      <div class="img-wrapper poslovnifm">
         <Image src={PoslovniFM} alt="poslovnifm" />
+      </div>
+      <div class="img-wrapper em">
+        <Image src={EM} alt="em" />
       </div>
     </div>
   </div>
@@ -137,6 +141,7 @@ import PoslovniFM from "../assets/images/poslovnifm2.png"
     display: inline-block;
     width: 130px;
     height: 50px;
+    margin-right: 25px;
   }
 
   img {
@@ -145,47 +150,69 @@ import PoslovniFM from "../assets/images/poslovnifm2.png"
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: contain;
-    height: 50px;
+    height: 100%;
+    width: 100%;
     width: auto;
   }
 
-  @media (min-width: 600px) {
+  .enter {
+    width: 80px;
+  }
+
+  .em,
+  .hrt2,
+  .poslovnifm {
+    width: 60px;
+  }
+
+  .hrt2 {
+    width: 90px;
+  }
+  .vgdanas {
+    width: 160px;
+  }
+
+  .poslovnifm {
+    width: 140px;
+  }
+  .cosmopolitan {
+    width: 180px;
+  }
+
+  @media (min-width: 1100px) {
     .img-wrapper {
-      margin-right: 30px;
+      height: 80px;
+      width: 180px;
+      margin-right: 50px;
+    }
+    .cosmopolitan {
+      width: 270px;
+    }
+    .vgdanas {
+      width: 260px;
+    }
+    .em {
+      width: 110px;
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1800px) {
     .img-wrapper {
-      margin-right: 60px;
+      height: 100px;
+      width: 200px;
+      margin-right: 90px;
     }
-  }
-  @media (max-width: 1600px) {
-    .img-wrapper {
-      margin-right: 65px;
-      height: 65px;
+    .cosmopolitan {
+      width: 330px;
     }
-    img {
-      height: 65px;
+    .vgdanas {
+      width: 330px;
     }
-  }
-  @media (min-width: 1600px) {
-    .img-wrapper {
-      margin-right: 85px;
-      height: 85px;
+    .poslovnifm {
+      width: 230px;
     }
-    img {
-      height: 85px;
-    }
-  }
-
-  @media (min-width: 1900px) {
-    .img-wrapper {
-      margin-right: 150px;
-      height: 110px;
-    }
-    img {
-      height: 110px;
+    .em {
+      width: 110px;
     }
   }
 
