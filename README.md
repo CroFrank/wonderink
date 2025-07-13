@@ -53,7 +53,26 @@ Projekt je izrađen korištenjem sljedećih tehnologija:
 
 OFL - Google Font - Cinzel, Monserrat
 
+LICENCA ZA KORIŠTENJE KODA
+
+Ovaj kod izrađen je od strane Fran Branković za projekt Wonderink i ostaje u vlasništvu autora.
+
+Klijentu Wonderink d.o.o. dodjeljuje se:
+
+- neisključiva,
+- neprenosiva,
+- vremenski neograničena
+
+licenca za korištenje ovog koda **isključivo za potrebe rada web stranice** [wonderink.hr].
+
+Klijent ne smije:
+
+- dijeliti, distribuirati ili prodavati ovaj kod trećim stranama,
+- koristiti dijelove ovog koda u drugim projektima bez pisanog odobrenja autora.
+
+Sva autorska prava zadržava Fran Branković (WebLifeSupport).
+
 ## Autori i kontakt
 
-Projekt je izradio obrt Bonani za Wonderink d.o.o.
+Projekt je izradio obrt Bonani(WebLifeSupport) za Wonderink d.o.o.
 Za podršku i dodatne informacije, kontaktirajte: info@weblifesupport.com
